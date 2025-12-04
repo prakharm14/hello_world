@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+// Salary structure
+struct Salary {
+    int emp_id;
+    char name[50];
+    float basic;
+    float hra;
+    float da;
+    float ta;
+    float gross;
+};
+
+int main() {
+    struct Salary e;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &e.emp_id);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", e.name);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &e.basic);
+
+    printf("Enter HRA: ");
+    scanf("%f", &e.hra);
+
+    printf("Enter DA: ");
+    scanf("%f", &e.da);
+
+    printf("Enter TA: ");
+    scanf("%f", &e.ta);
+
+    // Gross salary calculation
+    e.gross = e.basic + e.hra + e.da + e.ta;
+
+    printf("\n------ SALARY REPORT ------\n");
+    printf("Employee ID      : %d\n", e.emp_id);
+    printf("Employee Name    : %s\n", e.name);
+    printf("Basic Salary     : %.2f\n", e.basic);
+    printf("HRA              : %.2f\n", e.hra);
+    printf("DA               : %.2f\n", e.da);
+    printf("TA               : %.2f\n", e.ta);
+    printf("Gross Salary     : %.2f\n", e.gross);
+
+    return 0;
+}
